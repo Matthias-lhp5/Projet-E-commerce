@@ -55,3 +55,25 @@ footer{
 .logoShop{
     font-size: 1.5rem;
 }
+.imgItems{
+    height: auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+.selectionItem{
+    width: 100%;
+}
+
+.priceItem{
+    margin: 20px 0px 0px 0px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.deliveredItem{
+    font-style: italic;
+    font-size: 0.8rem;
+    color: grey;
+}
+

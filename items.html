@@ -10,7 +10,60 @@
 </head>
 <body>
 
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+      </button>
     
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Iphone 12 Pro Max</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <img class="imgItems" src="assets/img/iphone12ProMax.jpeg" alt="">
+                        </div>
+                        <div class="col-12 col-md-6 text-md-left text-center mt-4">
+                            <div>
+                                <select class="custom-select mb-3" id="validationCustom04" required>
+                                    <option selected disabled value="">Select Couleur</option>
+                                    <option>Noir</option>
+                                    <option>Bleu</option>
+                                    <option>Blanc</option>
+                                    <option>Rouge</option>
+                                </select>
+                            </div>
+                            <div>
+                                <select class="custom-select" id="validationCustom04" required>
+                                    <option selected disabled value="">Select Stockage</option>
+                                    <option>64go</option>
+                                    <option>128go</option>
+                                    <option>256go</option>
+                                    <option>512go</option>
+                                </select>
+                            </div>
+                            <div class="text-center">
+                                <p class="priceItem">2 500,00 € TTC</p>
+                                <span class="deliveredItem">Livré entre le 15 et 31 Octobre</span>
+                                <div class="addShoppingCart btn btn-success col-12">Ajout au panier</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
     
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
