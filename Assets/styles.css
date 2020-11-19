@@ -2,3 +2,26 @@
     margin: 0;
     padding: 0;
 }
+
+.imgItems{
+    height: auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+.selectionItem{
+    width: 100%;
+}
+
+.priceItem{
+    margin: 20px 0px 0px 0px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.deliveredItem{
+    font-style: italic;
+    font-size: 0.8rem;
+    color: grey;
+}
+
