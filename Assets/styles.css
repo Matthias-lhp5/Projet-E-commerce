@@ -2,3 +2,56 @@
     margin: 0;
     padding: 0;
 }
+
+.navbar{
+    background: rgba(105, 158, 191, 0.9);
+}
+
+.imgPanier{
+    width: 2rem;
+}
+
+.imgLogo{
+    max-width: 7rem;
+    width: 100%;
+    height: auto;
+}
+
+.imgFond{
+    width: 100%;
+    min-height: 100%;
+    background-position: center;
+    margin-top: initial;
+}
+
+.test{
+    height: 50vh;
+    overflow: hidden;
+}
+
+.navigation{
+    font-weight: bold;
+}
+
+.titleP{
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+}
+
+footer{
+    background-color: #91cdf2;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.littleLogo{
+    padding: 0.5rem;
+    font-size: 2rem;
+}
+
+.logoShop{
+    font-size: 1.5rem;
+}
