@@ -77,9 +77,6 @@ footer{
     color: grey;
 }
 
-#acceuil{
-    display: initial;
-
 .card{
     border: 0rem;
     background-color: #FFF8F8;
@@ -87,7 +84,7 @@ footer{
     cursor: pointer;
 }
 
-#titlePhones{
+.titlePhones{
     margin-bottom: 20px;
     margin-top: 10px;
     margin-left: 30px;
@@ -122,4 +119,8 @@ footer{
 
 .container-fluid{
     text-align: justify;
+}
+
+.visibility{
+    display: block!important;
 }
