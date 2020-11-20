@@ -124,3 +124,6 @@ footer{
 .visibility{
     display: block!important;
 }
+.total{
+    font-style: italic;
+}
