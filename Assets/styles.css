@@ -1,4 +1,44 @@
-*{
-    margin: 0;
-    padding: 0;
+
+.card{
+    border: 0rem;
+    background-color: #FFF8F8;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+#titlePhones{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+
+.card:hover{
+    opacity: 0.5;
+}
+
+.beforePriceItem{
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+.priceItem{
+    font-size: 1rem;
+    font-style: normal;
+    color: red;
+}
+
+.card-img-top{
+    width: 70%;
+    height: 60%;
+}
+
+.garantieItem{
+    font-size: 0.7rem;
+    font-style: italic;
+    color: gray;
+}
+
+.container-fluid{
+    text-align: justify;
 }
