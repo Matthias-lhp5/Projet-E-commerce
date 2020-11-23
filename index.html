@@ -316,7 +316,7 @@
                         <div class="text-center">
                             <p class="priceItem">1 250,00 € TTC</p>
                             <span class="deliveredItem">Livré entre 1 et le 15 Décembre</span>
-                            <div class="addShoppingCart btn btn-success col-12" data-id="12" date-name="iPhone 12 Pro Max">Ajouter au panier</div>
+                            <div class="addShoppingCart btn btn-success col-12" onclick="addPanier()">Ajouter au panier</div>
                         </div>
                     </div>
                 </div>
@@ -368,7 +368,7 @@
                         <div class="text-center">
                             <p class="priceItem">1 100,00 € TTC</p>
                             <span class="deliveredItem">Livré entre 1 et le 15 Décembre</span>
-                            <div class="addShoppingCart btn btn-success col-12" id="addPanier">Ajouter au panier</div>
+                            <div class="addShoppingCart btn btn-success col-12" onclick="addPanier()">Ajouter au panier</div>
                         </div>
                     </div>
                 </div>
@@ -420,7 +420,7 @@
                         <div class="text-center">
                             <p class="priceItem">800,00 € TTC</p>
                             <span class="deliveredItem">Livré entre 1 et le 15 Décembre</span>
-                            <div class="addShoppingCart btn btn-success col-12">Ajouter au panier</div>
+                            <div class="addShoppingCart btn btn-success col-12" onclick="addPanier()">Ajouter au panier</div>
                         </div>
                     </div>
                 </div>
@@ -472,7 +472,7 @@
                         <div class="text-center">
                             <p class="priceItem">700,00 € TTC</p>
                             <span class="deliveredItem">Livré entre 1 et le 15 Décembre</span>
-                            <div class="addShoppingCart btn btn-success col-12">Ajouter au panier</div>
+                            <div class="addShoppingCart btn btn-success col-12" onclick="addPanier()">Ajouter au panier</div>
                         </div>
                     </div>
                 </div>
@@ -524,7 +524,7 @@
                         <div class="text-center">
                             <p class="priceItem">900,00 € TTC</p>
                             <span class="deliveredItem">Livré entre 1 et le 15 Décembre</span>
-                            <div class="addShoppingCart btn btn-success col-12">Ajouter au panier</div>
+                            <div class="addShoppingCart btn btn-success col-12" onclick="addPanier()">Ajouter au panier</div>
                         </div>
                     </div>
                 </div>
@@ -576,7 +576,7 @@
                         <div class="text-center">
                             <p class="priceItem">800,00 € TTC</p>
                             <span class="deliveredItem">Livré entre 1 et le 15 Décembre</span>
-                            <div class="addShoppingCart btn btn-success col-12">Ajouter au panier</div>
+                            <div class="addShoppingCart btn btn-success col-12" onclick="addPanier()">Ajouter au panier</div>
                         </div>
                     </div>
                 </div>
@@ -628,7 +628,7 @@
                         <div class="text-center">
                             <p class="priceItem">400,00 € TTC</p>
                             <span class="deliveredItem">Livré entre 1 et le 15 Décembre</span>
-                            <div class="addShoppingCart btn btn-success col-12">Ajouter au panier</div>
+                            <div class="addShoppingCart btn btn-success col-12" onclick="addPanier()">Ajouter au panier</div>
                         </div>
                     </div>
                 </div>
@@ -642,7 +642,7 @@
 </div>
 <!-- Fin Modal Samsung Galaxy S9 -->
 
-<!-- Modal Samsung Galaxy S9 -->
+<!-- Modal Samsung Galaxy S8 -->
 <div class="modal fade" id="modalSamsungGalaxyS8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -692,7 +692,7 @@
       </div>
     </div>
 </div>
-<!-- Fin Modal Samsung Galaxy S9 -->
+<!-- Fin Modal Samsung Galaxy S8 -->
 
 <!-- modal panier  -->
 <div class="modal fade" id="modalPanier" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -734,7 +734,7 @@
                     </div>
                 </div>
                 <div>
-                    <h4 class="mt-3">Total : <span>1500,00 €</span></h4>
+                    <h4 class="mt-3" id="finalPrice">Total : <span>1500,00 €</span></h4>
                 </div>
             </div>
             <div class="modal-footer">

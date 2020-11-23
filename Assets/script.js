@@ -34,6 +34,7 @@ console.log(recupLignePanier);
 const panier = document.getElementById('panier');
 
 function addPanier (){
+    alert("Votre article a bien été ajouté au panier.");
     panier.innerHTML += 
     `
     <div class="d-flex border-bottom">
@@ -68,3 +69,8 @@ function addPanier (){
     </div>
     `
 }
+
+const priceItem = getElementByClassName("priceItem");
+
+const finalPrice = getElementById("finalPrice");
+finalPrice = parseFloat(priceItem) + parseFloat(priceItem);
