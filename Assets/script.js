@@ -34,10 +34,10 @@ choixCouleurArray.forEach(element => {
 
 
 
-var test = document.getElementById('listJsTest');
 
+const panier = document.getElementById('panier');
 
-function clickAjoutPanierItem (){
+function addPanier (){
 
     let selectStockageTel = document.getElementById('listStockageTel');
     let selectColorTel = document.getElementById('listColorTel');
@@ -45,10 +45,49 @@ function clickAjoutPanierItem (){
     let findIndexStockage = selectStockageTel.selectedIndex;
     let findIndexColor = selectColorTel.selectedIndex;
 
-    var recupStringStockage = selectStockageTel[findIndexStockage].innerHTML
-    var recupStringColor = selectColorTel[findIndexColor].innerHTML
+    let recupStringStockage = selectStockageTel[findIndexStockage].innerHTML;
+    let recupStringColor = selectColorTel[findIndexColor].innerHTML;
+    let recupName = 'Un nom';
+    let recupImg = 'Une image';
+    let recupPrix = 1200;
 
     console.log(recupStringColor);
     console.log(recupStringStockage);
 
+    alert("Votre article a bien été ajouté au panier.");
+
+
+    panier.innerHTML += 
+    `
+    <div class="d-flex border-bottom">
+        <div class="d-flex">
+            <img class="imgPanierArticle" src="${recupImg}" alt="">
+            <div>
+                <h3>${recupName}</h3>
+                <div class="d-flex">
+                    <i>En stock</i>
+                    <div class="ml-3 font-weight-bold">
+                        <p class="m-0">${recupStringStockage}go</p>
+                        <div>
+                            <p class="m-0">Couleur : ${recupStringColor}</p>
+                            <p class="m-0">${recupStringColor}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="prixQtqSuppItem">
+            <p>${recupPrix}</p>
+            <select name="selectNumberPanier">
+                <option class="testScript" value="1">1</option>
+                <option class="testScript" value="2">2</option>
+                <option class="testScript" value="3">3</option>
+                <option class="testScript" value="4">4</option>
+                <option class="testScript" value="5">5</option>
+            </select>
+            <p class="btn btn-success d-flex mt-3 delete-item">Supprimer</p>
+        </div>
+    </div>
+    `
 }
