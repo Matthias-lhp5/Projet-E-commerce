@@ -33,19 +33,22 @@ choixCouleurArray.forEach(element => {
 });
 
 
-test = document.getElementById('test');
-selector = document.getElementById('selector');
 
-test.addEventListener('blur', function(){
-    console.log(test)
-})
+var test = document.getElementById('listJsTest');
 
 
-var admettonsRecupImg = "assets/img/apple-iphone-11-pro-max.png";
-var admettonsRecupName = 'Iphone 11 Pro Max';
-var admettonsRecupPrix = 1150;
+function clickAjoutPanierItem (){
 
-var recupLignePanier = document.getElementById('recupLignePanier');
+    let selectStockageTel = document.getElementById('listStockageTel');
+    let selectColorTel = document.getElementById('listColorTel');
 
-console.log(recupLignePanier);
+    let findIndexStockage = selectStockageTel.selectedIndex;
+    let findIndexColor = selectColorTel.selectedIndex;
 
+    var recupStringStockage = selectStockageTel[findIndexStockage].innerHTML
+    var recupStringColor = selectColorTel[findIndexColor].innerHTML
+
+    console.log(recupStringColor);
+    console.log(recupStringStockage);
+
+}
