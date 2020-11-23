@@ -705,37 +705,30 @@
                 </button>
             </div>
             <div class="modal-body">
-                <table class="table table-info">
-                    <thead>
-                        <tr>
-                            <th scope="col">Article</th>
-                            <th>img</th>
-                            <td>Paramètres</td>
-                            <th scope="col">Quantité</th>
-                            <th scope="col">Prix Unitaire</th>
-                            <th scope="col">Total</th>
-                        </tr>
-                    </thead>
-                    <tbody id="recupLignePanier">
-                        <tr>
-                            <td>Iphone 12</td>
-                            <td><img class="imgPanierArticle" src="assets/img/galaxy s8 violet.jpg" alt=""></td>
-                            <td>
-                                <ul>
-                                    <li>256go</li>
-                                    <li>Noir</li>
-                                </ul>
-                            </td>
-                            <td><input value="1" type="number"></td>
-                            <td>1200€</td>
-                            <td>1200€</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <td class="total">Total des Articles</td>
-                        <td></td>
-                    </tfoot>
-                </table>
+                <div class="d-flex border-bottom">
+                    <div class="d-flex">
+                        <img class="imgPanierArticle" src="assets/img/apple-iphone-11-pro-max.png" alt="">
+                        <div>
+                            <h3>Iphone 11 Pro Max</h3>
+                            <i>En stock</i>
+                        </div>
+                    </div>
+                    
+                    <div class="prixQtqSuppItem">
+                        <p>1200,00 €</p>
+                        <select name="selectNumberPanier">
+                            <option class="testScript" value="1">1</option>
+                            <option class="testScript" value="2">2</option>
+                            <option class="testScript" value="3">3</option>
+                            <option class="testScript" value="4">4</option>
+                            <option class="testScript" value="5">5</option>
+                        </select>
+                        <p class="btn btn-success d-flex mt-3">Supprimer</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="mt-3">Total : <span>1500,00 €</span></h4>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>

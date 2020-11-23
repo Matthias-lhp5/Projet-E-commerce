@@ -129,5 +129,14 @@ footer{
 }
 
 .imgPanierArticle{
-    width: 20rem;
+    height: 5rem;
+    margin-right: 2rem;
+}
+.prixQtqSuppItem{
+    text-align: right;
+    margin-left: auto;
+}
+
+.suppItemPanier{
+    padding: 1rem;
 }
