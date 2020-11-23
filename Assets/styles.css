@@ -127,3 +127,7 @@ footer{
 .total{
     font-style: italic;
 }
+
+.imgPanierArticle{
+    width: 20rem;
+}

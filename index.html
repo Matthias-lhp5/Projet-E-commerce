@@ -31,7 +31,7 @@
                             <a class="nav-link navigation pr-5" id="lienForAcceuil" href="#">accueil</a>
                         </li>
                         <li class="nav-item active align-items-center">
-                        <a class="nav-link navigation" id="lienForTel" href="#">nos mobiles</a>
+                            <a class="nav-link navigation" id="lienForTel" href="#">nos mobiles</a>
                         </li>
                     </div>
                 </ul>
@@ -261,13 +261,13 @@
                         <p>CGU & CGV | Mentions légales</p>
                     </div>
                     <div class="col-12 col-sm-3">
-                        <p>Mode de paiment</p>
+                        <p class="choixCouleur">Mode de paiment</p>
                         <i class="fab fa-cc-visa littleLogo"></i>
                         <i class="fab fa-cc-paypal littleLogo"></i>
                         <i class="fab fa-cc-apple-pay littleLogo"></i>
                     </div>
                     <div class="col-12 col-sm-3">
-                        <p>Nos livreurs</p>
+                        <p class="choixCouleur">Nos livreurs</p>
                         <i class="fab fa-ups littleLogo"></i>
                         <i class="fab fa-dhl littleLogo"></i>
                         <i class="fab fa-fedex littleLogo"></i>
@@ -344,20 +344,20 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <img class="imgItems" src="assets/img/iphoneProMini.png" alt="">
+                        <img class="imgItems " src="assets/img/iphoneProMini.png" alt="">
                     </div>
                     <div class="col-12 col-md-6 text-md-left text-center mt-4">
                         <div>
-                            <select class="custom-select mb-3" id="validationCustom04" required>
-                                <option selected disabled value="">Select Couleur</option>
-                                <option>Noir</option>
-                                <option>Bleu</option>
-                                <option>Blanc</option>
-                                <option>Rouge</option>
+                            <select class="custom-select mb-3" id="selector" required>
+                                <option selected disabled value="Select Couleur">Select Couleur</option>
+                                <option class="choixCouleur">Noir</option>
+                                <option class="choixCouleur">Bleu</option>
+                                <option class="choixCouleur">Blanc</option>
+                                <option class="choixCouleur">Rouge</option>
                             </select>
                         </div>
                         <div>
-                            <select class="custom-select" id="validationCustom04" required>
+                            <select class="custom-select"  required>
                                 <option selected disabled value="">Select Stockage</option>
                                 <option>64go</option>
                                 <option>128go (+50€)</option>
@@ -368,7 +368,7 @@
                         <div class="text-center">
                             <p class="priceItem">1 100,00 € TTC</p>
                             <span class="deliveredItem">Livré entre le 15 et 31 Octobre</span>
-                            <div class="addShoppingCart btn btn-success col-12">Ajout au panier</div>
+                            <div class="addShoppingCart btn btn-success col-12" id="addPanier">Ajout au panier</div>
                         </div>
                     </div>
                 </div>
@@ -400,7 +400,7 @@
                     </div>
                     <div class="col-12 col-md-6 text-md-left text-center mt-4">
                         <div>
-                            <select class="custom-select mb-3" id="validationCustom04" required>
+                            <select class="custom-select mb-3" id="test" required>
                                 <option selected disabled value="">Select Couleur</option>
                                 <option>Noir</option>
                                 <option>Bleu</option>
@@ -709,38 +709,32 @@
                     <thead>
                         <tr>
                             <th scope="col">Article</th>
+                            <th>img</th>
+                            <td>Paramètres</td>
                             <th scope="col">Quantité</th>
                             <th scope="col">Prix Unitaire</th>
                             <th scope="col">Total</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="recupLignePanier">
                         <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td class="total">Total des Articles</td>
-                            <td></td>
-                            <td></td>
+                            <td>Iphone 12</td>
+                            <td><img class="imgPanierArticle" src="assets/img/galaxy s8 violet.jpg" alt=""></td>
+                            <td>
+                                <ul>
+                                    <li>256go</li>
+                                    <li>Noir</li>
+                                </ul>
+                            </td>
+                            <td><input value="1" type="number"></td>
+                            <td>1200€</td>
+                            <td>1200€</td>
                         </tr>
                     </tbody>
+                    <tfoot>
+                        <td class="total">Total des Articles</td>
+                        <td></td>
+                    </tfoot>
                 </table>
             </div>
             <div class="modal-footer">
