@@ -2,7 +2,7 @@
 var btnDeletePanier, btnDeletePanierArray, articlePanier, articlePanierArray, choixCouleur, choixCouleurArray, panier, activAddPanier, activAddPanierArray;
 var recupImg, recupImgArray, recupName, recupNameArray, recupPrice, recupPriceArray, recupColor, recupColorArray, recupStockage, recupStockageArray;
 var contenuArticle, selectPanier, selectPanierArray, selectPriceItem, selectPriceItemArray, affichagePricePanier, affichagePricePanierArray;
-var selectPriceFantome, selectPriceFantomeArray, btnDeletePanier, btnDeletePanierArray, articlePanier, articlePanierArray;
+var selectPriceFantome, selectPriceFantomeArray, btnDeletePanier, btnDeletePanierArray, articlePanier, articlePanierArray, totalPanier;
 
 function initialisationArray (){
     btnDeletePanier = document.getElementsByClassName('btnDeletePanier');
@@ -53,18 +53,21 @@ function initialisationArray (){
 
     articlePanier = document.getElementsByClassName('articlePanier');
     articlePanierArray = [... articlePanier];
+
+    totalPanier = document.getElementById('totalPanier');
+
 }
 
 initialisationArray();
 
+
 function prixClickPanier(){
-        
+    
     let result = 0;
-    let totalPanier = document.getElementById('totalPanier');
 
     affichagePricePanierArray.forEach(element => {
-        let test = parseInt(element.innerHTML)
-        result = result + test;
+        let prixElement = parseInt(element.innerHTML)
+        result = result + prixElement;
     });
 
     totalPanier.innerHTML = `Total : ${result}€`;
@@ -75,6 +78,22 @@ function test (element){
     let selectLineForDelete = articlePanierArray[selectIndexLigne];
     selectLineForDelete.remove();
 }
+
+function myFunction() {
+    initialisationArray();
+
+    var x = document.getElementById("snackbar");
+    console.log(x);
+    if(totalPanier.innerHTML == 'Total : 0€'){
+        x.innerHTML = `Votre panier est vide`
+    } else{
+        x.innerHTML = `Votre panier a bien été validé. Merci de votre commande ! :)`
+    }
+    
+    x.className = "show"
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+
+  }
 
 
 

@@ -190,20 +190,14 @@
     <!-- Fin container fluid page list item -->
     
     <!-- Début acceuil -->
+
         <div id="contentForAcceuil" class="d-none visibility">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
                         <p class="titleP mt-3">Notre entreprise</p>
-                        <p class="w-75 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.
-                            Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.
-                            Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
-                            Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim.
-                            Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue.
-                            Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales.
-                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh.
-                            Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+                        <p class="w-75 mx-auto">En tant que société Multimédia, nous jouissons, en Suisse, en Allemagne comme en France, 
+                            de la réputation d’être un partenaire novateur mettant en œuvre la vente de smartphone derniere génèration.
                         </p>
                     </div>
                 </div>
@@ -211,16 +205,30 @@
                 <div class="row">
                     <div class="col-12">
                         <p class="titleP mt-3">Nos valeurs</p>
-                        <p class="w-75 mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.
-                            Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.
-                            Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
-                            Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim.
-                            Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue.
-                            Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales.
-                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh.
-                            Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
-                        </p>
+                        <div class="w-75 mx-auto">
+                            <p class="w-100 mx-auto">Nos valeurs sont le reflet de notre histoire, notre identité et nos ambitions.
+                                Aujourd’hui comme hier, elles incarnent notre culture d’entreprise et 
+                                s’expriment au travers des actions quotidiennes de l’ensemble de nos équipes. 
+                                Elles structurent notre approche professionnelle et façonnent nos relations avec l’ensemble de nos parties prenantes.
+                        
+                                Respect, Partage, Discipline et Dynamisme : 
+                                telles sont les valeurs fondatrices sur lesquelles repose notre culture commune, 
+                                dans tous les pays où nous sommes acteurs.
+                            </p>
+                        
+                            <P class="w-100 mx-auto">Notre réussite collective repose sur la conviction, l’adhésion et la mobilisation de tous. 
+                                Notre capacité d’adaptation face aux changements, aux attentes du marché 
+                                et aux spécificités de nos clients passe par le dynamisme de chacun 
+                                de nos collaborateurs. L’audace, le dépassement de soi et la prise d’initiatives sont,
+                                au sein de l’entreprise, fortement encouragés.
+                            </P>
+                        
+                            <P class="w-100 mx-auto">Le respect implique de prendre en compte non seulement nos intérêts, mais également les intérêts de toutes les 
+                                parties prenantes : collaborateurs, clients, fournisseurs, partenaires,  etc. 
+                                Prendre en compte la diversité des expériences, des parcours, 
+                                des origines et des attentes est un gage de pérennité dans nos actions.
+                            </P>
+                        </div>
                     </div>
             
                 </div>
@@ -717,7 +725,8 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                <button type="button" class="btn btn-primary">Valider votre panier</button>
+                <div id="snackbar"></div>
+                <button type="button" class="btn btn-primary" onclick="myFunction()">Valider votre panier</button>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
