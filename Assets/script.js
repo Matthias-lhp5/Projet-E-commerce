@@ -1,3 +1,83 @@
+
+var btnDeletePanier, btnDeletePanierArray, articlePanier, articlePanierArray, choixCouleur, choixCouleurArray, panier, activAddPanier, activAddPanierArray;
+var recupImg, recupImgArray, recupName, recupNameArray, recupPrice, recupPriceArray, recupColor, recupColorArray, recupStockage, recupStockageArray;
+var contenuArticle, selectPanier, selectPanierArray, selectPriceItem, selectPriceItemArray, affichagePricePanier, affichagePricePanierArray;
+var selectPriceFantome, selectPriceFantomeArray, btnDeletePanier, btnDeletePanierArray, articlePanier, articlePanierArray;
+
+function initialisationArray (){
+    btnDeletePanier = document.getElementsByClassName('btnDeletePanier');
+    btnDeletePanierArray = [... btnDeletePanier];
+
+    articlePanier = document.getElementsByClassName('articlePanier');
+    articlePanierArray = [... articlePanier];
+
+    choixCouleur = document.getElementsByClassName('choixCouleur');
+    choixCouleurArray = [... choixCouleur];
+
+    panier = document.getElementById('panier');
+
+    activAddPanier = document.getElementsByClassName('activAddPanier');
+    activAddPanierArray = [... activAddPanier];
+
+    recupImg = document.getElementsByClassName('imgItems');
+    recupImgArray = [... recupImg];
+
+    recupName = document.getElementsByClassName('selectName');
+    recupNameArray = [... recupName];
+
+    recupPrice = document.getElementsByClassName('priceItem')
+    recupPriceArray = [... recupPrice];
+
+    recupColor = document.getElementsByClassName('choiceColor');
+    recupColorArray = [... recupColor];
+
+    recupStockage = document.getElementsByClassName('choiceStockage');
+    recupStockageArray = [... recupStockage];
+
+    contenuArticle = document.getElementById('contenuArticle');
+
+    selectPanier = document.getElementsByClassName('selectPanier');
+    selectPanierArray = [... selectPanier];
+
+    selectPriceItem = document.getElementsByClassName('selectPriceItem');
+    selectPriceItemArray = [... selectPriceItem];
+
+    affichagePricePanier = document.getElementsByClassName('affichagePricePanier');
+    affichagePricePanierArray = [... affichagePricePanier];
+
+    selectPriceFantome = document.getElementsByClassName('priceFantome');
+    selectPriceFantomeArray = [... selectPriceFantome];
+
+    btnDeletePanier = document.getElementsByClassName('btnDeletePanier');
+    btnDeletePanierArray = [... btnDeletePanier];
+
+    articlePanier = document.getElementsByClassName('articlePanier');
+    articlePanierArray = [... articlePanier];
+}
+
+initialisationArray();
+
+function prixClickPanier(){
+        
+    let result = 0;
+    let totalPanier = document.getElementById('totalPanier');
+
+    affichagePricePanierArray.forEach(element => {
+        let test = parseInt(element.innerHTML)
+        result = result + test;
+    });
+
+    totalPanier.innerHTML = `Total : ${result}€`;
+}
+
+function test (element){
+    let selectIndexLigne = btnDeletePanierArray.indexOf(element);
+    let selectLineForDelete = articlePanierArray[selectIndexLigne];
+    selectLineForDelete.remove();
+}
+
+
+
 var lienForTel = document.getElementById('lienForTel');
 var lienForAcceuil = document.getElementById('lienForAcceuil');
 
@@ -10,6 +90,7 @@ lienForTel.addEventListener('click', function(){
     contentForAcceuil.classList.remove('visibility');
     contentForTel.classList.add('visibility');
 
+
 });
 
 lienForAcceuil.addEventListener('click', function(){
@@ -20,11 +101,6 @@ lienForAcceuil.addEventListener('click', function(){
 });
 
 
-
-let choixCouleur = document.getElementsByClassName('choixCouleur');
-let choixCouleurArray = [... choixCouleur]
-
-
 choixCouleurArray.forEach(element => {
 
     element.addEventListener('click', function(){
@@ -33,130 +109,106 @@ choixCouleurArray.forEach(element => {
 });
 
 
-
-
-const panier = document.getElementById('panier');
-
-let activAddPanier = document.getElementsByClassName('activAddPanier');
-let activAddPanierArray = [... activAddPanier];
-
-let recupImg = document.getElementsByClassName('imgItems');
-let recupName = document.getElementsByClassName('selectName');
-
-
 activAddPanierArray.forEach(element => {
     element.addEventListener('click', function(){
-        let recupIndex = element.selectedIndex;
-        console.log(element);
+        let recupIndex = activAddPanierArray.indexOf(element);
+        
+        let recupIndexSelectColor = recupColorArray[recupIndex].selectedIndex;
+        let recupIndexSelectStockage = recupStockageArray[recupIndex].selectedIndex;
+        
+        let recupForViewImg = recupImgArray[recupIndex].src;
+        let recupForViewName = recupNameArray[recupIndex].innerHTML;
+        let recupForViewPrice = recupPriceArray[recupIndex].innerHTML;
+        let recupForViewColor = recupColorArray[recupIndex].options[recupIndexSelectColor].innerHTML;
+        let recupForViewStockage = recupStockageArray[recupIndex].options[recupIndexSelectStockage].innerHTML;
+
+        console.log(recupForViewColor);
+        console.log(recupForViewStockage);
+
+        contenuArticle.innerHTML += 
+        `
+        <div class="d-flex border-bottom articlePanier justify-content-between">
+            <div class="d-flex">
+                <img class="imgPanierArticle" src="${recupForViewImg}" alt="">
+                <div>
+                    <h3>${recupForViewName}</h3>
+                    <div class="d-flex">
+                        <i>En stock</i>
+                        <div class="ml-3 font-weight-bold">
+                            <p class="m-0">${recupForViewStockage}</p>
+                            <p class="m-0">Couleur : ${recupForViewColor}</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div>
+                <p class="selectPriceItem affichagePricePanier text-right">${recupForViewPrice}</p>
+                <span class="d-none priceFantome">${recupForViewPrice}</span>
+                <select name="selectNumberPanier" class="selectPanier d-flex ml-auto">
+                    <option class="testScript" value="1">1</option>
+                    <option class="testScript" value="2">2</option>
+                    <option class="testScript" value="3">3</option>
+                    <option class="testScript" value="4">4</option>
+                    <option class="testScript" value="5">5</option>
+                </select>
+                <p class="btn btn-danger d-flex mt-3 btnDeletePanier">Supprimer</p>
+            </div>
+        </div>
+        `
+
+        initialisationArray();
+
+
     })
 });
 
+// Pour changer le prix des  articles
 
+var clickPanier = document.getElementById('clickPanier');
 
+clickPanier.addEventListener('click', function(){
 
-
-
-
-function addPanier (){
-
-    let selectStockageTel = document.getElementById('listStockageTel');
-    let selectColorTel = document.getElementById('listColorTel');
-
-    let findIndexStockage = selectStockageTel.selectedIndex;
-    let findIndexColor = selectColorTel.selectedIndex;
-
-    let recupStringStockage = selectStockageTel[findIndexStockage].innerHTML;
-    let recupStringColor = selectColorTel[findIndexColor].innerHTML;
-
-    // A changer quand on récup les élements
-    let recupName = 'Iphone 12 Pro Max';
-    let recupImg = 'assets/img/iphone12ProMax.jpeg';
-    let recupPrix = 1200.00;
-
-    console.log(recupStringColor);
-    console.log(recupStringStockage);
-
-    alert("Votre article a bien été ajouté au panier.");
-
-
-    panier.innerHTML += 
-    `
-    <div class="d-flex border-bottom mt-3">
-        <div class="d-flex">
-            <img class="imgPanierArticle" src="${recupImg}" alt="">
-            <div>
-                <h3>${recupName}</h3>
-                <div class="d-flex">
-                    <i>En stock</i>
-                    <div class="ml-3 font-weight-bold">
-                        <p class="m-0">${recupStringStockage}</p>
-                        <div>
-                            <p class="m-0">Couleur : ${recupStringColor}</p>
-                            <p class="m-0">${recupStringColor}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    selectPanierArray.forEach(element => {  
     
-        <div class="prixQtqSuppItem">
-            <p>${recupPrix}€</p>
-            <select name="selectNumberPanier">
-                <option class="testScript" value="1">1</option>
-                <option class="testScript" value="2">2</option>
-                <option class="testScript" value="3">3</option>
-                <option class="testScript" value="4">4</option>
-                <option class="testScript" value="5">5</option>
-            </select>
-            <p class="btn btn-success d-flex mt-3 delete-item">Supprimer</p>
-        </div>
-    </div>
-    `
-}
-let selectPanier = document.getElementsByClassName('selectPanier');
-let selectPanierArray = [... selectPanier];
-
-// Pour changer prix articles
-
-let selectPriceItem = document.getElementsByClassName('selectPriceItem');
-let selectPriceItemArray = [... selectPriceItem];
-
-let affichagePricePanier = document.getElementsByClassName('affichagePricePanier');
-let affichagePricePanierArray = [... affichagePricePanier];
-
-let selectPriceFantome = document.getElementsByClassName('priceFantome');
-let selectPriceFantomeArray = [... selectPriceFantome];
-
-selectPanierArray.forEach(element => {  
+        element.addEventListener('change', function(){
     
-    // Pour supprimer un article
-    let test = selectPanierArray.indexOf(element);
-    console.log(test);
+            let selectIndexLigne = selectPanierArray.indexOf(element);
+            let selectIndexOption = element.selectedIndex + 1;
+    
+            let recupAffichagePrix = affichagePricePanierArray[selectIndexLigne];
+            let recupPriceFantome = selectPriceFantomeArray[selectIndexLigne].innerHTML;
+    
+            let result = parseInt(selectIndexOption) * parseInt(recupPriceFantome);
+    
+            recupAffichagePrix.innerHTML = `${result}€`;
+            prixClickPanier();
+    
+        })
+        });
+    
+    // Supprimer un article
+    
+    btnDeletePanierArray.forEach(element => {
+    
+        element.addEventListener('click', function(){
+            test(element);
+            initialisationArray();
+            console.log(articlePanierArray);
+            prixClickPanier();
 
-    // Pour changer le prix
-    element.addEventListener('change', function(){
 
-        let selectIndexLigne = selectPanierArray.indexOf(element);
-        let selectIndexOption = element.selectedIndex + 1;
+        })
 
-        let recupAffichagePrix = affichagePricePanierArray[selectIndexLigne];
-        let recupPriceFantome = selectPriceFantomeArray[selectIndexLigne].innerHTML;
-
-        let result = parseInt(selectIndexOption) * parseInt(recupPriceFantome);
-
-        recupAffichagePrix.innerHTML = `${result}€`;
-
-    })
-
+        
     });
-    
+
+    prixClickPanier();
 
 
 
-
-
-
-
+})
 
 
 
