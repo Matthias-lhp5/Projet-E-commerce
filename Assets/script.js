@@ -37,6 +37,26 @@ choixCouleurArray.forEach(element => {
 
 const panier = document.getElementById('panier');
 
+let activAddPanier = document.getElementsByClassName('activAddPanier');
+let activAddPanierArray = [... activAddPanier];
+
+let recupImg = document.getElementsByClassName('imgItems');
+let recupName = document.getElementsByClassName('selectName');
+
+
+activAddPanierArray.forEach(element => {
+    element.addEventListener('click', function(){
+        let recupIndex = element.selectedIndex;
+        console.log(element);
+    })
+});
+
+
+
+
+
+
+
 function addPanier (){
 
     let selectStockageTel = document.getElementById('listStockageTel');
@@ -47,9 +67,11 @@ function addPanier (){
 
     let recupStringStockage = selectStockageTel[findIndexStockage].innerHTML;
     let recupStringColor = selectColorTel[findIndexColor].innerHTML;
-    let recupName = 'Un nom';
-    let recupImg = 'Une image';
-    let recupPrix = 1200;
+
+    // A changer quand on récup les élements
+    let recupName = 'Iphone 12 Pro Max';
+    let recupImg = 'assets/img/iphone12ProMax.jpeg';
+    let recupPrix = 1200.00;
 
     console.log(recupStringColor);
     console.log(recupStringStockage);
@@ -59,7 +81,7 @@ function addPanier (){
 
     panier.innerHTML += 
     `
-    <div class="d-flex border-bottom">
+    <div class="d-flex border-bottom mt-3">
         <div class="d-flex">
             <img class="imgPanierArticle" src="${recupImg}" alt="">
             <div>
@@ -67,7 +89,7 @@ function addPanier (){
                 <div class="d-flex">
                     <i>En stock</i>
                     <div class="ml-3 font-weight-bold">
-                        <p class="m-0">${recupStringStockage}go</p>
+                        <p class="m-0">${recupStringStockage}</p>
                         <div>
                             <p class="m-0">Couleur : ${recupStringColor}</p>
                             <p class="m-0">${recupStringColor}</p>
@@ -78,7 +100,7 @@ function addPanier (){
         </div>
     
         <div class="prixQtqSuppItem">
-            <p>${recupPrix}</p>
+            <p>${recupPrix}€</p>
             <select name="selectNumberPanier">
                 <option class="testScript" value="1">1</option>
                 <option class="testScript" value="2">2</option>

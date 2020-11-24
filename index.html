@@ -316,7 +316,7 @@
                         <div class="text-center">
                             <p class="priceItem">1 250,00 € TTC</p>
                             <span class="deliveredItem">Livré entre 1 et le 15 Décembre</span>
-                            <div class="addShoppingCart btn btn-success col-12" onclick="addPanier()">Ajouter au panier</div>
+                            <div class="addShoppingCart btn btn-success col-12 activAddPanier">Ajouter au panier</div>
                         </div>
                     </div>
                 </div>
@@ -368,7 +368,7 @@
                         <div class="text-center">
                             <p class="priceItem">1 100,00 € TTC</p>
                             <span class="deliveredItem">Livré entre 1 et le 15 Décembre</span>
-                            <div class="addShoppingCart btn btn-success col-12" onclick="addPanier()">Ajouter au panier</div>
+                            <div class="addShoppingCart btn btn-success col-12 activAddPanier">Ajouter au panier</div>
                         </div>
                     </div>
                 </div>
@@ -420,7 +420,7 @@
                         <div class="text-center">
                             <p class="priceItem">800,00 € TTC</p>
                             <span class="deliveredItem">Livré entre 1 et le 15 Décembre</span>
-                            <div class="addShoppingCart btn btn-success col-12" onclick="addPanier()">Ajouter au panier</div>
+                            <div class="addShoppingCart btn btn-success col-12 activAddPanier">Ajouter au panier</div>
                         </div>
                     </div>
                 </div>
@@ -472,7 +472,7 @@
                         <div class="text-center">
                             <p class="priceItem">700,00 € TTC</p>
                             <span class="deliveredItem">Livré entre 1 et le 15 Décembre</span>
-                            <div class="addShoppingCart btn btn-success col-12" onclick="addPanier()">Ajouter au panier</div>
+                            <div class="addShoppingCart btn btn-success col-12 activAddPanier">Ajouter au panier</div>
                         </div>
                     </div>
                 </div>
@@ -524,7 +524,7 @@
                         <div class="text-center">
                             <p class="priceItem">900,00 € TTC</p>
                             <span class="deliveredItem">Livré entre 1 et le 15 Décembre</span>
-                            <div class="addShoppingCart btn btn-success col-12" onclick="addPanier()">Ajouter au panier</div>
+                            <div class="addShoppingCart btn btn-success col-12 activAddPanier">Ajouter au panier</div>
                         </div>
                     </div>
                 </div>
@@ -576,7 +576,7 @@
                         <div class="text-center">
                             <p class="priceItem">800,00 € TTC</p>
                             <span class="deliveredItem">Livré entre 1 et le 15 Décembre</span>
-                            <div class="addShoppingCart btn btn-success col-12" onclick="addPanier()">Ajouter au panier</div>
+                            <div class="addShoppingCart btn btn-success col-12 activAddPanier">Ajouter au panier</div>
                         </div>
                     </div>
                 </div>
@@ -595,14 +595,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Samsung Galaxy S9</h5>
+          <h5 class="modal-title selectName">Samsung Galaxy S9</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row" id="testJsRecupElements">
                     <div class="col-12 col-md-6">
                         <img class="imgItems" src="assets/img/samsungs10.jpg" alt="">
                     </div>
@@ -628,7 +628,7 @@
                         <div class="text-center">
                             <p class="priceItem">400,00 € TTC</p>
                             <span class="deliveredItem">Livré entre 1 et le 15 Décembre</span>
-                            <div class="addShoppingCart btn btn-success col-12" onclick="addPanier()">Ajouter au panier</div>
+                            <div class="addShoppingCart btn btn-success col-12 activAddPanier">Ajouter 7</div>
                         </div>
                     </div>
                 </div>
@@ -680,7 +680,7 @@
                         <div class="text-center">
                             <p class="priceItem">300,00 € TTC</p>
                             <span class="deliveredItem">Livré entre 1 et le 15 Décembre</span>
-                            <div class="btn btn-success col-12" onclick="addPanier()">Ajouter au panier</div>
+                            <div class="btn btn-success col-12 activAddPanier">Ajouter 8</div>
                         </div>
                     </div>
                 </div>
@@ -704,35 +704,38 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body" id="panier">
-                <div class="d-flex border-bottom">
-                    <div class="d-flex">
-                        <img class="imgPanierArticle" src="assets/img/apple-iphone-11-pro-max.png" alt="">
-                        <div>
-                            <h3>Iphone 11 Pro Max</h3>
-                            <div class="d-flex">
-                                <i>En stock</i>
-                                <div class="ml-3 font-weight-bold">
-                                    <p class="m-0">128go RAM</p>
-                                    <p class="m-0">Couleur : Noir</p>
+            <div class="modal-body">
+                <div id="panier">
+                    <div class="d-flex border-bottom">
+                        <div class="d-flex">
+                            <img class="imgPanierArticle" src="assets/img/apple-iphone-11-pro-max.png" alt="">
+                            <div>
+                                <h3>Iphone 11 Pro Max</h3>
+                                <div class="d-flex">
+                                    <i>En stock</i>
+                                    <div class="ml-3 font-weight-bold">
+                                        <p class="m-0">128go RAM</p>
+                                        <p class="m-0">Couleur : Noir</p>
+                                    </div>
                                 </div>
+                                
                             </div>
-                            
+                        </div>
+                        
+                        <div class="prixQtqSuppItem">
+                            <p>1200,00 €</p>
+                            <select name="selectNumberPanier">
+                                <option class="testScript" value="1">1</option>
+                                <option class="testScript" value="2">2</option>
+                                <option class="testScript" value="3">3</option>
+                                <option class="testScript" value="4">4</option>
+                                <option class="testScript" value="5">5</option>
+                            </select>
+                            <p class="btn btn-success d-flex mt-3 delete-item">Supprimer</p>
                         </div>
                     </div>
-                    
-                    <div class="prixQtqSuppItem">
-                        <p>1200,00 €</p>
-                        <select name="selectNumberPanier">
-                            <option class="testScript" value="1">1</option>
-                            <option class="testScript" value="2">2</option>
-                            <option class="testScript" value="3">3</option>
-                            <option class="testScript" value="4">4</option>
-                            <option class="testScript" value="5">5</option>
-                        </select>
-                        <p class="btn btn-success d-flex mt-3 delete-item">Supprimer</p>
-                    </div>
                 </div>
+                
                 <div>
                     <h4 class="mt-3" id="finalPrice">Total : <span>1500,00 €</span></h4>
                 </div>
