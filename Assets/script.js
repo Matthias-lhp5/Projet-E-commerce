@@ -23,6 +23,7 @@ lienForAcceuil.addEventListener('click', function(){
 let selectPanier = document.getElementsByClassName('selectPanier');
 let selectPanierArray = [... selectPanier];
 
+// Pour changer prix articles
 
 let selectPriceItem = document.getElementsByClassName('selectPriceItem');
 let selectPriceItemArray = [... selectPriceItem];
@@ -30,27 +31,32 @@ let selectPriceItemArray = [... selectPriceItem];
 let affichagePricePanier = document.getElementsByClassName('affichagePricePanier');
 let affichagePricePanierArray = [... affichagePricePanier];
 
+let selectPriceFantome = document.getElementsByClassName('priceFantome');
+let selectPriceFantomeArray = [... selectPriceFantome];
+
 selectPanierArray.forEach(element => {  
     
+    // Pour supprimer un article
+    let test = selectPanierArray.indexOf(element);
+    console.log(test);
+
+    // Pour changer le prix
     element.addEventListener('change', function(){
 
         let selectIndexLigne = selectPanierArray.indexOf(element);
         let selectIndexOption = element.selectedIndex + 1;
 
-        let recupPrixBase = selectPriceItemArray[selectIndexLigne].innerHTML;
         let recupAffichagePrix = affichagePricePanierArray[selectIndexLigne];
+        let recupPriceFantome = selectPriceFantomeArray[selectIndexLigne].innerHTML;
 
-        let result = parseInt(selectIndexOption) * parseInt(recupPrixBase);
+        let result = parseInt(selectIndexOption) * parseInt(recupPriceFantome);
 
-        recupAffichagePrix.innerHTML = result;
-        
+        recupAffichagePrix.innerHTML = `${result}€`;
 
     })
 
     });
     
-
-
 
 
 
